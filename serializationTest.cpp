@@ -1,14 +1,24 @@
 #include <iostream>
 #include "Message.h"
 
+void initMessage(Message& msg)
+{
+    msg.age = 19;
+    msg.name = "ppp";
+
+    Grade grade;
+    grade.subject = "Math";
+    grade.value = 100;
+    msg.grades.push_back(grade); 
+
+    grade.subject = "English";
+    grade.value = 90;
+    msg.grades.push_back(grade);
+}
 int main()
 {
     Message msg;
-    msg.age = 19;
-    msg.name = "ppp";
-    for(int i = 0; i < 2; i++)
-    {
-        
-    }
+    initMessage(msg);
+    
     return 0;
 }

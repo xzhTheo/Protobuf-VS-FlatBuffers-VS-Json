@@ -1,10 +1,10 @@
 #include <string>
 #include <vector>
-class grade
+class Grade
 {
 public:
-    grade() : subject(""), value(0) {}
-    ~grade() {
+    Grade() : subject(""), value(0) {}
+    ~Grade() {
         subject = "";
         value = 0;
     }
@@ -29,5 +29,5 @@ public:
     int age;
     float weight;
     std::string name;
-    std::vector<grade> grades;
+    std::vector<Grade> grades;
 };
