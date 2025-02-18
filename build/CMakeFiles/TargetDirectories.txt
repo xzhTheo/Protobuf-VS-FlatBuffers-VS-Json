@@ -1,0 +1,3 @@
+/Users/theo.xu/study/serialization_compare/build/CMakeFiles/xzh.dir
+/Users/theo.xu/study/serialization_compare/build/CMakeFiles/edit_cache.dir
+/Users/theo.xu/study/serialization_compare/build/CMakeFiles/rebuild_cache.dir

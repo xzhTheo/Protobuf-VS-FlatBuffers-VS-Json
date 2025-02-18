@@ -1,0 +1,16 @@
+namespace fbs;
+
+table grade {
+    subject: string;
+    value: float;
+}
+
+table Message {
+    age: int;
+    weight: float;
+    name: string;
+    grades: [grade];
+}
+
+// 设置根类型为 Message
+root_type Message;
