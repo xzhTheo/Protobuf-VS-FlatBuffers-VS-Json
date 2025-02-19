@@ -19,6 +19,5 @@ int main()
 {
     Message msg;
     initMessage(msg);
-    fbsParser parser;
     return 0;
 }
