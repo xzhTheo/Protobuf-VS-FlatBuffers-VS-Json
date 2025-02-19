@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Message.h"
-
+#include "fbsParser.h"
 void initMessage(Message& msg)
 {
     msg.age = 19;
@@ -19,6 +19,6 @@ int main()
 {
     Message msg;
     initMessage(msg);
-    
+    fbsParser parser;
     return 0;
 }
