@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/theo.xu/study/serialization_compare/build",
+  "command": "/usr/bin/clang++  -I/Users/theo.xu/study/serialization_compare/fbsgenerate/flatbuffers-2.0.0/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++17 -o CMakeFiles/xzh.dir/serializationTest.cpp.o -c /Users/theo.xu/study/serialization_compare/serializationTest.cpp",
+  "file": "/Users/theo.xu/study/serialization_compare/serializationTest.cpp"
+}
+]

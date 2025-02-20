@@ -73,43 +73,27 @@ CMakeFiles/xzh.dir/serializationTest.cpp.o: CMakeFiles/xzh.dir/flags.make
 CMakeFiles/xzh.dir/serializationTest.cpp.o: /Users/theo.xu/study/serialization_compare/serializationTest.cpp
 CMakeFiles/xzh.dir/serializationTest.cpp.o: CMakeFiles/xzh.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/xzh.dir/serializationTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xzh.dir/serializationTest.cpp.o -MF CMakeFiles/xzh.dir/serializationTest.cpp.o.d -o CMakeFiles/xzh.dir/serializationTest.cpp.o -c /Users/theo.xu/study/serialization_compare/serializationTest.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xzh.dir/serializationTest.cpp.o -MF CMakeFiles/xzh.dir/serializationTest.cpp.o.d -o CMakeFiles/xzh.dir/serializationTest.cpp.o -c /Users/theo.xu/study/serialization_compare/serializationTest.cpp
 
 CMakeFiles/xzh.dir/serializationTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xzh.dir/serializationTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theo.xu/study/serialization_compare/serializationTest.cpp > CMakeFiles/xzh.dir/serializationTest.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theo.xu/study/serialization_compare/serializationTest.cpp > CMakeFiles/xzh.dir/serializationTest.cpp.i
 
 CMakeFiles/xzh.dir/serializationTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xzh.dir/serializationTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theo.xu/study/serialization_compare/serializationTest.cpp -o CMakeFiles/xzh.dir/serializationTest.cpp.s
-
-CMakeFiles/xzh.dir/fbsParser.cpp.o: CMakeFiles/xzh.dir/flags.make
-CMakeFiles/xzh.dir/fbsParser.cpp.o: /Users/theo.xu/study/serialization_compare/fbsParser.cpp
-CMakeFiles/xzh.dir/fbsParser.cpp.o: CMakeFiles/xzh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/xzh.dir/fbsParser.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xzh.dir/fbsParser.cpp.o -MF CMakeFiles/xzh.dir/fbsParser.cpp.o.d -o CMakeFiles/xzh.dir/fbsParser.cpp.o -c /Users/theo.xu/study/serialization_compare/fbsParser.cpp
-
-CMakeFiles/xzh.dir/fbsParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xzh.dir/fbsParser.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theo.xu/study/serialization_compare/fbsParser.cpp > CMakeFiles/xzh.dir/fbsParser.cpp.i
-
-CMakeFiles/xzh.dir/fbsParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xzh.dir/fbsParser.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theo.xu/study/serialization_compare/fbsParser.cpp -o CMakeFiles/xzh.dir/fbsParser.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theo.xu/study/serialization_compare/serializationTest.cpp -o CMakeFiles/xzh.dir/serializationTest.cpp.s
 
 # Object files for target xzh
 xzh_OBJECTS = \
-"CMakeFiles/xzh.dir/serializationTest.cpp.o" \
-"CMakeFiles/xzh.dir/fbsParser.cpp.o"
+"CMakeFiles/xzh.dir/serializationTest.cpp.o"
 
 # External object files for target xzh
 xzh_EXTERNAL_OBJECTS =
 
 xzh: CMakeFiles/xzh.dir/serializationTest.cpp.o
-xzh: CMakeFiles/xzh.dir/fbsParser.cpp.o
 xzh: CMakeFiles/xzh.dir/build.make
 xzh: CMakeFiles/xzh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable xzh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable xzh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xzh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -81,12 +81,12 @@ clean: CMakeFiles/xzh.dir/clean
 CMakeFiles/xzh.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=1,2,3 "Built target xzh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theo.xu/study/serialization_compare/build/CMakeFiles --progress-num=1,2 "Built target xzh"
 .PHONY : CMakeFiles/xzh.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/xzh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theo.xu/study/serialization_compare/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theo.xu/study/serialization_compare/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/xzh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theo.xu/study/serialization_compare/build/CMakeFiles 0
 .PHONY : CMakeFiles/xzh.dir/rule

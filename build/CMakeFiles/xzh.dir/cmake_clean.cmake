@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/xzh.dir/fbsParser.cpp.o"
-  "CMakeFiles/xzh.dir/fbsParser.cpp.o.d"
   "CMakeFiles/xzh.dir/serializationTest.cpp.o"
   "CMakeFiles/xzh.dir/serializationTest.cpp.o.d"
   "xzh"

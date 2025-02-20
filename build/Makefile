@@ -129,30 +129,6 @@ xzh/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/build
 .PHONY : xzh/fast
 
-fbsParser.o: fbsParser.cpp.o
-.PHONY : fbsParser.o
-
-# target to build an object file
-fbsParser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/fbsParser.cpp.o
-.PHONY : fbsParser.cpp.o
-
-fbsParser.i: fbsParser.cpp.i
-.PHONY : fbsParser.i
-
-# target to preprocess a source file
-fbsParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/fbsParser.cpp.i
-.PHONY : fbsParser.cpp.i
-
-fbsParser.s: fbsParser.cpp.s
-.PHONY : fbsParser.s
-
-# target to generate assembly for a file
-fbsParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xzh.dir/build.make CMakeFiles/xzh.dir/fbsParser.cpp.s
-.PHONY : fbsParser.cpp.s
-
 serializationTest.o: serializationTest.cpp.o
 .PHONY : serializationTest.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... xzh"
-	@echo "... fbsParser.o"
-	@echo "... fbsParser.i"
-	@echo "... fbsParser.s"
 	@echo "... serializationTest.o"
 	@echo "... serializationTest.i"
 	@echo "... serializationTest.s"

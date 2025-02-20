@@ -1,5 +1,7 @@
 #include <string>
 #include <vector>
+#ifndef _MESSAGE_H
+#define _MESSAGE_H
 class Grade
 {
 public:
@@ -31,3 +33,5 @@ public:
     std::string name;
     std::vector<Grade> grades;
 };
+
+#endif
