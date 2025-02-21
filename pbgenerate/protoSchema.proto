@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package fbs;
+
+message grade {
+    string subject = 1;
+    float value = 2;
+}
+
+message Message {
+    int32 age = 1;
+    float weight = 2;
+    string name = 3;
+    repeated grade grades = 4;
+}
