@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package fbs;
+package Message;
 
 message grade {
     string subject = 1;

@@ -49,20 +49,20 @@ struct TableStruct_protoSchema_2eproto {
 };
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_protoSchema_2eproto;
-namespace fbs {
+namespace Message {
 class Message;
 struct MessageDefaultTypeInternal;
 extern MessageDefaultTypeInternal _Message_default_instance_;
 class grade;
 struct gradeDefaultTypeInternal;
 extern gradeDefaultTypeInternal _grade_default_instance_;
-}  // namespace fbs
+}  // namespace Message
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
 }  // namespace google
 
-namespace fbs {
+namespace Message {
 
 // ===================================================================
 
@@ -70,7 +70,7 @@ namespace fbs {
 // -------------------------------------------------------------------
 
 class grade final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:fbs.grade) */ {
+/* @@protoc_insertion_point(class_definition:Message.grade) */ {
  public:
   inline grade() : grade(nullptr) {}
   ~grade() PROTOBUF_FINAL;
@@ -192,7 +192,7 @@ class grade final : public ::google::protobuf::Message
   void InternalSwap(grade* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "fbs.grade"; }
+  static ::absl::string_view FullMessageName() { return "Message.grade"; }
 
  protected:
   explicit grade(::google::protobuf::Arena* arena);
@@ -239,13 +239,13 @@ class grade final : public ::google::protobuf::Message
   void _internal_set_value(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:fbs.grade)
+  // @@protoc_insertion_point(class_scope:Message.grade)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      25, 2>
+      29, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
@@ -276,7 +276,7 @@ class grade final : public ::google::protobuf::Message
 // -------------------------------------------------------------------
 
 class Message final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:fbs.Message) */ {
+/* @@protoc_insertion_point(class_definition:Message.Message) */ {
  public:
   inline Message() : Message(nullptr) {}
   ~Message() PROTOBUF_FINAL;
@@ -398,7 +398,7 @@ class Message final : public ::google::protobuf::Message
   void InternalSwap(Message* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "fbs.Message"; }
+  static ::absl::string_view FullMessageName() { return "Message.Message"; }
 
  protected:
   explicit Message(::google::protobuf::Arena* arena);
@@ -421,23 +421,23 @@ class Message final : public ::google::protobuf::Message
     kAgeFieldNumber = 1,
     kWeightFieldNumber = 2,
   };
-  // repeated .fbs.grade grades = 4;
+  // repeated .Message.grade grades = 4;
   int grades_size() const;
   private:
   int _internal_grades_size() const;
 
   public:
   void clear_grades() ;
-  ::fbs::grade* mutable_grades(int index);
-  ::google::protobuf::RepeatedPtrField<::fbs::grade>* mutable_grades();
+  ::Message::grade* mutable_grades(int index);
+  ::google::protobuf::RepeatedPtrField<::Message::grade>* mutable_grades();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::fbs::grade>& _internal_grades() const;
-  ::google::protobuf::RepeatedPtrField<::fbs::grade>* _internal_mutable_grades();
+  const ::google::protobuf::RepeatedPtrField<::Message::grade>& _internal_grades() const;
+  ::google::protobuf::RepeatedPtrField<::Message::grade>* _internal_mutable_grades();
   public:
-  const ::fbs::grade& grades(int index) const;
-  ::fbs::grade* add_grades();
-  const ::google::protobuf::RepeatedPtrField<::fbs::grade>& grades() const;
+  const ::Message::grade& grades(int index) const;
+  ::Message::grade* add_grades();
+  const ::google::protobuf::RepeatedPtrField<::Message::grade>& grades() const;
   // string name = 3;
   void clear_name() ;
   const std::string& name() const;
@@ -474,13 +474,13 @@ class Message final : public ::google::protobuf::Message
   void _internal_set_weight(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:fbs.Message)
+  // @@protoc_insertion_point(class_scope:Message.Message)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       2, 4, 1,
-      24, 2>
+      28, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
@@ -500,7 +500,7 @@ class Message final : public ::google::protobuf::Message
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const Message& from_msg);
-    ::google::protobuf::RepeatedPtrField< ::fbs::grade > grades_;
+    ::google::protobuf::RepeatedPtrField< ::Message::grade > grades_;
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::int32_t age_;
     float weight_;
@@ -534,7 +534,7 @@ inline void grade::clear_subject() {
 }
 inline const std::string& grade::subject() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:fbs.grade.subject)
+  // @@protoc_insertion_point(field_get:Message.grade.subject)
   return _internal_subject();
 }
 template <typename Arg_, typename... Args_>
@@ -542,11 +542,11 @@ inline PROTOBUF_ALWAYS_INLINE void grade::set_subject(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.subject_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:fbs.grade.subject)
+  // @@protoc_insertion_point(field_set:Message.grade.subject)
 }
 inline std::string* grade::mutable_subject() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_subject();
-  // @@protoc_insertion_point(field_mutable:fbs.grade.subject)
+  // @@protoc_insertion_point(field_mutable:Message.grade.subject)
   return _s;
 }
 inline const std::string& grade::_internal_subject() const {
@@ -563,7 +563,7 @@ inline std::string* grade::_internal_mutable_subject() {
 }
 inline std::string* grade::release_subject() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:fbs.grade.subject)
+  // @@protoc_insertion_point(field_release:Message.grade.subject)
   return _impl_.subject_.Release();
 }
 inline void grade::set_allocated_subject(std::string* value) {
@@ -574,7 +574,7 @@ inline void grade::set_allocated_subject(std::string* value) {
           _impl_.subject_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:fbs.grade.subject)
+  // @@protoc_insertion_point(field_set_allocated:Message.grade.subject)
 }
 
 // float value = 2;
@@ -583,12 +583,12 @@ inline void grade::clear_value() {
   _impl_.value_ = 0;
 }
 inline float grade::value() const {
-  // @@protoc_insertion_point(field_get:fbs.grade.value)
+  // @@protoc_insertion_point(field_get:Message.grade.value)
   return _internal_value();
 }
 inline void grade::set_value(float value) {
   _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:fbs.grade.value)
+  // @@protoc_insertion_point(field_set:Message.grade.value)
 }
 inline float grade::_internal_value() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -609,12 +609,12 @@ inline void Message::clear_age() {
   _impl_.age_ = 0;
 }
 inline ::int32_t Message::age() const {
-  // @@protoc_insertion_point(field_get:fbs.Message.age)
+  // @@protoc_insertion_point(field_get:Message.Message.age)
   return _internal_age();
 }
 inline void Message::set_age(::int32_t value) {
   _internal_set_age(value);
-  // @@protoc_insertion_point(field_set:fbs.Message.age)
+  // @@protoc_insertion_point(field_set:Message.Message.age)
 }
 inline ::int32_t Message::_internal_age() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -631,12 +631,12 @@ inline void Message::clear_weight() {
   _impl_.weight_ = 0;
 }
 inline float Message::weight() const {
-  // @@protoc_insertion_point(field_get:fbs.Message.weight)
+  // @@protoc_insertion_point(field_get:Message.Message.weight)
   return _internal_weight();
 }
 inline void Message::set_weight(float value) {
   _internal_set_weight(value);
-  // @@protoc_insertion_point(field_set:fbs.Message.weight)
+  // @@protoc_insertion_point(field_set:Message.Message.weight)
 }
 inline float Message::_internal_weight() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -654,7 +654,7 @@ inline void Message::clear_name() {
 }
 inline const std::string& Message::name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:fbs.Message.name)
+  // @@protoc_insertion_point(field_get:Message.Message.name)
   return _internal_name();
 }
 template <typename Arg_, typename... Args_>
@@ -662,11 +662,11 @@ inline PROTOBUF_ALWAYS_INLINE void Message::set_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:fbs.Message.name)
+  // @@protoc_insertion_point(field_set:Message.Message.name)
 }
 inline std::string* Message::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:fbs.Message.name)
+  // @@protoc_insertion_point(field_mutable:Message.Message.name)
   return _s;
 }
 inline const std::string& Message::_internal_name() const {
@@ -683,7 +683,7 @@ inline std::string* Message::_internal_mutable_name() {
 }
 inline std::string* Message::release_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:fbs.Message.name)
+  // @@protoc_insertion_point(field_release:Message.Message.name)
   return _impl_.name_.Release();
 }
 inline void Message::set_allocated_name(std::string* value) {
@@ -694,10 +694,10 @@ inline void Message::set_allocated_name(std::string* value) {
           _impl_.name_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:fbs.Message.name)
+  // @@protoc_insertion_point(field_set_allocated:Message.Message.name)
 }
 
-// repeated .fbs.grade grades = 4;
+// repeated .Message.grade grades = 4;
 inline int Message::_internal_grades_size() const {
   return _internal_grades().size();
 }
@@ -708,39 +708,39 @@ inline void Message::clear_grades() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.grades_.Clear();
 }
-inline ::fbs::grade* Message::mutable_grades(int index)
+inline ::Message::grade* Message::mutable_grades(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:fbs.Message.grades)
+  // @@protoc_insertion_point(field_mutable:Message.Message.grades)
   return _internal_mutable_grades()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::fbs::grade>* Message::mutable_grades()
+inline ::google::protobuf::RepeatedPtrField<::Message::grade>* Message::mutable_grades()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:fbs.Message.grades)
+  // @@protoc_insertion_point(field_mutable_list:Message.Message.grades)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_grades();
 }
-inline const ::fbs::grade& Message::grades(int index) const
+inline const ::Message::grade& Message::grades(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:fbs.Message.grades)
+  // @@protoc_insertion_point(field_get:Message.Message.grades)
   return _internal_grades().Get(index);
 }
-inline ::fbs::grade* Message::add_grades() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::Message::grade* Message::add_grades() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::fbs::grade* _add = _internal_mutable_grades()->Add();
-  // @@protoc_insertion_point(field_add:fbs.Message.grades)
+  ::Message::grade* _add = _internal_mutable_grades()->Add();
+  // @@protoc_insertion_point(field_add:Message.Message.grades)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::fbs::grade>& Message::grades() const
+inline const ::google::protobuf::RepeatedPtrField<::Message::grade>& Message::grades() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:fbs.Message.grades)
+  // @@protoc_insertion_point(field_list:Message.Message.grades)
   return _internal_grades();
 }
-inline const ::google::protobuf::RepeatedPtrField<::fbs::grade>&
+inline const ::google::protobuf::RepeatedPtrField<::Message::grade>&
 Message::_internal_grades() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.grades_;
 }
-inline ::google::protobuf::RepeatedPtrField<::fbs::grade>*
+inline ::google::protobuf::RepeatedPtrField<::Message::grade>*
 Message::_internal_mutable_grades() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.grades_;
@@ -751,7 +751,7 @@ Message::_internal_mutable_grades() {
 #endif  // __GNUC__
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace fbs
+}  // namespace Message
 
 
 // @@protoc_insertion_point(global_scope)

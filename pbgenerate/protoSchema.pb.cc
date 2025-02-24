@@ -23,7 +23,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
-namespace fbs {
+namespace Message {
 
 inline constexpr grade::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -82,7 +82,7 @@ struct MessageDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MessageDefaultTypeInternal _Message_default_instance_;
-}  // namespace fbs
+}  // namespace Message
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_protoSchema_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -91,50 +91,51 @@ const ::uint32_t
     TableStruct_protoSchema_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::fbs::grade, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::Message::grade, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::fbs::grade, _impl_.subject_),
-        PROTOBUF_FIELD_OFFSET(::fbs::grade, _impl_.value_),
+        PROTOBUF_FIELD_OFFSET(::Message::grade, _impl_.subject_),
+        PROTOBUF_FIELD_OFFSET(::Message::grade, _impl_.value_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::fbs::Message, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::Message::Message, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::fbs::Message, _impl_.age_),
-        PROTOBUF_FIELD_OFFSET(::fbs::Message, _impl_.weight_),
-        PROTOBUF_FIELD_OFFSET(::fbs::Message, _impl_.name_),
-        PROTOBUF_FIELD_OFFSET(::fbs::Message, _impl_.grades_),
+        PROTOBUF_FIELD_OFFSET(::Message::Message, _impl_.age_),
+        PROTOBUF_FIELD_OFFSET(::Message::Message, _impl_.weight_),
+        PROTOBUF_FIELD_OFFSET(::Message::Message, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::Message::Message, _impl_.grades_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::fbs::grade)},
-        {10, -1, -1, sizeof(::fbs::Message)},
+        {0, -1, -1, sizeof(::Message::grade)},
+        {10, -1, -1, sizeof(::Message::Message)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::fbs::_grade_default_instance_._instance,
-    &::fbs::_Message_default_instance_._instance,
+    &::Message::_grade_default_instance_._instance,
+    &::Message::_Message_default_instance_._instance,
 };
 const char descriptor_table_protodef_protoSchema_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\021protoSchema.proto\022\003fbs\"\'\n\005grade\022\017\n\007sub"
-    "ject\030\001 \001(\t\022\r\n\005value\030\002 \001(\002\"P\n\007Message\022\013\n\003"
-    "age\030\001 \001(\005\022\016\n\006weight\030\002 \001(\002\022\014\n\004name\030\003 \001(\t\022"
-    "\032\n\006grades\030\004 \003(\0132\n.fbs.gradeb\006proto3"
+    "\n\021protoSchema.proto\022\007Message\"\'\n\005grade\022\017\n"
+    "\007subject\030\001 \001(\t\022\r\n\005value\030\002 \001(\002\"T\n\007Message"
+    "\022\013\n\003age\030\001 \001(\005\022\016\n\006weight\030\002 \001(\002\022\014\n\004name\030\003 "
+    "\001(\t\022\036\n\006grades\030\004 \003(\0132\016.Message.gradeb\006pro"
+    "to3"
 };
 static ::absl::once_flag descriptor_table_protoSchema_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_protoSchema_2eproto = {
     false,
     false,
-    155,
+    163,
     descriptor_table_protodef_protoSchema_2eproto,
     "protoSchema.proto",
     &descriptor_table_protoSchema_2eproto_once,
@@ -147,7 +148,7 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_protoSchema_2e
     file_level_enum_descriptors_protoSchema_2eproto,
     file_level_service_descriptors_protoSchema_2eproto,
 };
-namespace fbs {
+namespace Message {
 // ===================================================================
 
 class grade::_Internal {
@@ -161,11 +162,11 @@ grade::grade(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:fbs.grade)
+  // @@protoc_insertion_point(arena_constructor:Message.grade)
 }
 inline PROTOBUF_NDEBUG_INLINE grade::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::fbs::grade& from_msg)
+    const Impl_& from, const ::Message::grade& from_msg)
       : subject_(arena, from.subject_),
         _cached_size_{0} {}
 
@@ -184,7 +185,7 @@ grade::grade(
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   _impl_.value_ = from._impl_.value_;
 
-  // @@protoc_insertion_point(copy_constructor:fbs.grade)
+  // @@protoc_insertion_point(copy_constructor:Message.grade)
 }
 inline PROTOBUF_NDEBUG_INLINE grade::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -197,7 +198,7 @@ inline void grade::SharedCtor(::_pb::Arena* arena) {
   _impl_.value_ = {};
 }
 grade::~grade() {
-  // @@protoc_insertion_point(destructor:fbs.grade)
+  // @@protoc_insertion_point(destructor:Message.grade)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -236,7 +237,7 @@ const ::google::protobuf::MessageLite::ClassData* grade::GetClassData() const {
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 25, 2> grade::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 29, 2> grade::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -251,7 +252,7 @@ const ::_pbi::TcParseTable<1, 2, 0, 25, 2> grade::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::fbs::grade>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::Message::grade>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // float value = 2;
@@ -272,14 +273,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 25, 2> grade::_table_ = {
   }},
   // no aux_entries
   {{
-    "\11\7\0\0\0\0\0\0"
-    "fbs.grade"
+    "\15\7\0\0\0\0\0\0"
+    "Message.grade"
     "subject"
   }},
 };
 
 PROTOBUF_NOINLINE void grade::Clear() {
-// @@protoc_insertion_point(message_clear_start:fbs.grade)
+// @@protoc_insertion_point(message_clear_start:Message.grade)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -301,7 +302,7 @@ PROTOBUF_NOINLINE void grade::Clear() {
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
           const grade& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:fbs.grade)
+          // @@protoc_insertion_point(serialize_to_array_start:Message.grade)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -309,7 +310,7 @@ PROTOBUF_NOINLINE void grade::Clear() {
           if (!this_._internal_subject().empty()) {
             const std::string& _s = this_._internal_subject();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fbs.grade.subject");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Message.grade.subject");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -325,7 +326,7 @@ PROTOBUF_NOINLINE void grade::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:fbs.grade)
+          // @@protoc_insertion_point(serialize_to_array_end:Message.grade)
           return target;
         }
 
@@ -336,7 +337,7 @@ PROTOBUF_NOINLINE void grade::Clear() {
         ::size_t grade::ByteSizeLong() const {
           const grade& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:fbs.grade)
+          // @@protoc_insertion_point(message_byte_size_start:Message.grade)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -362,7 +363,7 @@ PROTOBUF_NOINLINE void grade::Clear() {
 void grade::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<grade*>(&to_msg);
   auto& from = static_cast<const grade&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:fbs.grade)
+  // @@protoc_insertion_point(class_specific_merge_from_start:Message.grade)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -377,7 +378,7 @@ void grade::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::p
 }
 
 void grade::CopyFrom(const grade& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:fbs.grade)
+// @@protoc_insertion_point(class_specific_copy_from_start:Message.grade)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -409,11 +410,11 @@ Message::Message(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:fbs.Message)
+  // @@protoc_insertion_point(arena_constructor:Message.Message)
 }
 inline PROTOBUF_NDEBUG_INLINE Message::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::fbs::Message& from_msg)
+    const Impl_& from, const ::Message::Message& from_msg)
       : grades_{visibility, arena, from.grades_},
         name_(arena, from.name_),
         _cached_size_{0} {}
@@ -439,7 +440,7 @@ Message::Message(
                offsetof(Impl_, age_) +
                sizeof(Impl_::weight_));
 
-  // @@protoc_insertion_point(copy_constructor:fbs.Message)
+  // @@protoc_insertion_point(copy_constructor:Message.Message)
 }
 inline PROTOBUF_NDEBUG_INLINE Message::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -458,7 +459,7 @@ inline void Message::SharedCtor(::_pb::Arena* arena) {
                sizeof(Impl_::weight_));
 }
 Message::~Message() {
-  // @@protoc_insertion_point(destructor:fbs.Message)
+  // @@protoc_insertion_point(destructor:Message.Message)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -497,7 +498,7 @@ const ::google::protobuf::MessageLite::ClassData* Message::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 1, 24, 2> Message::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 1, 28, 2> Message::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -512,10 +513,10 @@ const ::_pbi::TcParseTable<2, 4, 1, 24, 2> Message::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::fbs::Message>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::Message::Message>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .fbs.grade grades = 4;
+    // repeated .Message.grade grades = 4;
     {::_pbi::TcParser::FastMtR1,
      {34, 63, 0, PROTOBUF_FIELD_OFFSET(Message, _impl_.grades_)}},
     // int32 age = 1;
@@ -539,20 +540,20 @@ const ::_pbi::TcParseTable<2, 4, 1, 24, 2> Message::_table_ = {
     // string name = 3;
     {PROTOBUF_FIELD_OFFSET(Message, _impl_.name_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // repeated .fbs.grade grades = 4;
+    // repeated .Message.grade grades = 4;
     {PROTOBUF_FIELD_OFFSET(Message, _impl_.grades_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::fbs::grade>()},
+    {::_pbi::TcParser::GetTable<::Message::grade>()},
   }}, {{
-    "\13\0\0\4\0\0\0\0"
-    "fbs.Message"
+    "\17\0\0\4\0\0\0\0"
+    "Message.Message"
     "name"
   }},
 };
 
 PROTOBUF_NOINLINE void Message::Clear() {
-// @@protoc_insertion_point(message_clear_start:fbs.Message)
+// @@protoc_insertion_point(message_clear_start:Message.Message)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -577,7 +578,7 @@ PROTOBUF_NOINLINE void Message::Clear() {
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
           const Message& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:fbs.Message)
+          // @@protoc_insertion_point(serialize_to_array_start:Message.Message)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -599,11 +600,11 @@ PROTOBUF_NOINLINE void Message::Clear() {
           if (!this_._internal_name().empty()) {
             const std::string& _s = this_._internal_name();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fbs.Message.name");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Message.Message.name");
             target = stream->WriteStringMaybeAliased(3, _s, target);
           }
 
-          // repeated .fbs.grade grades = 4;
+          // repeated .Message.grade grades = 4;
           for (unsigned i = 0, n = static_cast<unsigned>(
                                    this_._internal_grades_size());
                i < n; i++) {
@@ -619,7 +620,7 @@ PROTOBUF_NOINLINE void Message::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:fbs.Message)
+          // @@protoc_insertion_point(serialize_to_array_end:Message.Message)
           return target;
         }
 
@@ -630,7 +631,7 @@ PROTOBUF_NOINLINE void Message::Clear() {
         ::size_t Message::ByteSizeLong() const {
           const Message& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:fbs.Message)
+          // @@protoc_insertion_point(message_byte_size_start:Message.Message)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -639,7 +640,7 @@ PROTOBUF_NOINLINE void Message::Clear() {
 
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
            {
-            // repeated .fbs.grade grades = 4;
+            // repeated .Message.grade grades = 4;
              {
               total_size += 1UL * this_._internal_grades_size();
               for (const auto& msg : this_._internal_grades()) {
@@ -670,7 +671,7 @@ PROTOBUF_NOINLINE void Message::Clear() {
 void Message::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<Message*>(&to_msg);
   auto& from = static_cast<const Message&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:fbs.Message)
+  // @@protoc_insertion_point(class_specific_merge_from_start:Message.Message)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -690,7 +691,7 @@ void Message::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
 }
 
 void Message::CopyFrom(const Message& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:fbs.Message)
+// @@protoc_insertion_point(class_specific_copy_from_start:Message.Message)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -716,7 +717,7 @@ void Message::InternalSwap(Message* PROTOBUF_RESTRICT other) {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace fbs
+}  // namespace Message
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
