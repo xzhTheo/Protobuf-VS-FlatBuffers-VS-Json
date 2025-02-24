@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/xzh.dir/serializationTest.cpp.o"
-  "CMakeFiles/xzh.dir/serializationTest.cpp.o.d"
-  "xzh"
+  "CMakeFiles/xzh.dir/serializationTest.cpp.obj"
+  "CMakeFiles/xzh.dir/serializationTest.cpp.obj.d"
+  "libxzh.dll.a"
+  "xzh.exe"
+  "xzh.exe.manifest"
   "xzh.pdb"
 )
 
