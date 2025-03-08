@@ -74,6 +74,16 @@
         "algorithm": "cpp",
         "forward_list": "cpp",
         "valarray": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "__memory": "cpp",
+        "filesystem": "cpp",
+        "*.inc": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "thread": "cpp"
     }
 }

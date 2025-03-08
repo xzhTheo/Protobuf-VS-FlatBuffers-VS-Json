@@ -10,8 +10,8 @@ private:
 public:
     fbsParser(/* args */);
     ~fbsParser();
-    flatbuffers::DetachedBuffer serializeMessage(Message message);
-    void deserializeMessage(const uint8_t* buffer);
+    std::string serializeMessage(Message message);
+    Message deserializeMessage(std::string buffer);
 };
 
 fbsParser::fbsParser(/* args */)
@@ -24,7 +24,7 @@ fbsParser::~fbsParser()
 }
 
 // 序列化函数
-flatbuffers::DetachedBuffer fbsParser::serializeMessage(Message message) {
+std::string fbsParser::serializeMessage(Message message) {
     flatbuffers::FlatBufferBuilder builder;
     // 创建 grades
     std::vector<flatbuffers::Offset<fbs::grade>> fbsgrades;
@@ -32,37 +32,37 @@ flatbuffers::DetachedBuffer fbsParser::serializeMessage(Message message) {
         auto fbsgrade = fbs::Creategrade(builder, builder.CreateString(grade.subject), grade.value);
         fbsgrades.push_back(fbsgrade);
     }
-
-    // 创建 name 的偏移量
     auto name_offset = builder.CreateString(message.name);
-
-    // 创建 grades 的向量
     auto grades_offset = builder.CreateVector(fbsgrades);
-
-    // 创建 Message 对象
     auto fbsmessage = fbs::CreateMessage(builder, message.age, message.weight, name_offset, grades_offset);
 
-    // 完成构建
     builder.Finish(fbsmessage);
-
-    // 返回序列化后的数据
-    return builder.Release();
+    auto datafbs = builder.Release();
+    std::string str(reinterpret_cast<const char*>(datafbs.data()), datafbs.size());
+    return str;
 }
 
 // 反序列化函数
-void fbsParser::deserializeMessage(const uint8_t* buffer) {
-    auto message = fbs::GetMessage(buffer);
+Message fbsParser::deserializeMessage(std::string buffer) {
+    auto fbsMessage = fbs::GetMessage(buffer.c_str());
+    Message message;
+    // std::cout << "Age: " << fbsMessage->age() << std::endl;
+    // std::cout << "Weight: " << fbsMessage->weight() << std::endl;
+    // std::cout << "Name: " << fbsMessage->name()->str() << std::endl;
+    message.age = fbsMessage->age();
+    message.weight = fbsMessage->weight();
+    message.name = fbsMessage->name()->str();
 
-    std::cout << "Age: " << message->age() << std::endl;
-    std::cout << "Weight: " << message->weight() << std::endl;
-    std::cout << "Name: " << message->name()->str() << std::endl;
-
-    auto grades = message->grades();
-    if (grades != nullptr) {
-        for (const auto* grade : *grades) {
-            std::cout << "Subject: " << grade->subject()->str() << ", Value: " << grade->value() << std::endl;
+    auto fbsGrades = fbsMessage->grades();
+    if (fbsGrades != nullptr) {
+        for (const auto* fbsGrade : *fbsGrades) {
+            Grade grade;
+            // std::cout << "Subject: " << fbsGrade->subject()->str() << ", Value: " << fbsGrade->value() << std::endl;
+            grade.value = fbsGrade->value();
+            grade.subject = fbsGrade->subject()->str();
         }
     }
+    return message;
 }
 
 #endif
