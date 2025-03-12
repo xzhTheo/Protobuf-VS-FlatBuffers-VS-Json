@@ -30,19 +30,19 @@ public:
         pbmessage::Message deserializedMessage;
         Message msg;
         deserializedMessage.ParseFromString(serialized);
-        msg.age = deserializedMessage.age();
-        msg.weight = deserializedMessage.weight();
-        msg.name = deserializedMessage.name();
-        // std::cout << " age: " << deserializedMessage.age() << std::endl;
-        // std::cout << " weight: " << deserializedMessage.weight() << std::endl;
-        // std::cout << " name: " << deserializedMessage.name() << std::endl;
-        for (const auto& grade : deserializedMessage.grades()) {
-            Grade g;
-            g.subject = grade.subject();
-            g.value = grade.value();
-            // std::cout << "Subject: " << grade.subject() << ", Value: " << grade.value() << std::endl;
-            msg.grades.push_back(g);
-        }
+        // msg.age = deserializedMessage.age();
+        // msg.weight = deserializedMessage.weight();
+        // msg.name = deserializedMessage.name();
+        // // std::cout << " age: " << deserializedMessage.age() << std::endl;
+        // // std::cout << " weight: " << deserializedMessage.weight() << std::endl;
+        // // std::cout << " name: " << deserializedMessage.name() << std::endl;
+        // for (const auto& grade : deserializedMessage.grades()) {
+        //     Grade g;
+        //     g.subject = grade.subject();
+        //     g.value = grade.value();
+        //     // std::cout << "Subject: " << grade.subject() << ", Value: " << grade.value() << std::endl;
+        //     msg.grades.push_back(g);
+        // }
 
         return msg;
     }

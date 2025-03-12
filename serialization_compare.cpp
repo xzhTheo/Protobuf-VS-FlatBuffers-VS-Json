@@ -8,10 +8,10 @@
 #include <fstream>
 #include <thread>
 #include <chrono>
-//非扁平化（多层键值对结构）数据和等效的扁平化（多维数组）数据
-#define MAX_WRITE_TIMES 100000
-#define MAX_SERIALIZE_TIMES 100000
-#define MAX_DESERIALIZE_TIMES 100000
+
+#define MAX_WRITE_TIMES 1000000
+#define MAX_SERIALIZE_TIMES 1000000
+#define MAX_DESERIALIZE_TIMES 1000000
 
 void initMessage(Message& msg)
 {

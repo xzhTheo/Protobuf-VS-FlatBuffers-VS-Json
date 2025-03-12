@@ -48,21 +48,21 @@ std::string JsonParser::serializeMessage(Message message) {
 Message JsonParser::deserializeMessage(const std::string& jsonStr) {
     json j = json::parse(jsonStr);
     Message message;
-    message.age = j["age"];
-    message.weight = j["weight"];
-    message.name = j["name"];
+    // message.age = j["age"];
+    // message.weight = j["weight"];
+    // message.name = j["name"];
 
-    // std::cout << "Age: " << message.age << std::endl;
-    // std::cout << "Weight: " << message.weight << std::endl;
-    // std::cout << "Name: " << message.name << std::endl;
+    // // std::cout << "Age: " << message.age << std::endl;
+    // // std::cout << "Weight: " << message.weight << std::endl;
+    // // std::cout << "Name: " << message.name << std::endl;
 
-    for (const auto& gradeJson : j["grades"]) {
-        Grade grade;
-        grade.subject = gradeJson["subject"];
-        grade.value = gradeJson["value"];
-        // std::cout << "subject: " << grade.subject << "value: " << grade.value << std::endl;
-        message.grades.push_back(grade);
-    }
+    // for (const auto& gradeJson : j["grades"]) {
+    //     Grade grade;
+    //     grade.subject = gradeJson["subject"];
+    //     grade.value = gradeJson["value"];
+    //     // std::cout << "subject: " << grade.subject << "value: " << grade.value << std::endl;
+    //     message.grades.push_back(grade);
+    // }
 
     return message;
 }

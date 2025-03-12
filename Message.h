@@ -1,7 +1,8 @@
-#include <string>
+﻿#include <string>
 #include <vector>
 #ifndef _MESSAGE_H
 #define _MESSAGE_H
+//非扁平化（多层键值对结构）数据测试
 class Grade
 {
 public:

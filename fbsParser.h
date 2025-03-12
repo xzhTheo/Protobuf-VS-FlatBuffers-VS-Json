@@ -49,19 +49,19 @@ Message fbsParser::deserializeMessage(std::string buffer) {
     // std::cout << "Age: " << fbsMessage->age() << std::endl;
     // std::cout << "Weight: " << fbsMessage->weight() << std::endl;
     // std::cout << "Name: " << fbsMessage->name()->str() << std::endl;
-    message.age = fbsMessage->age();
-    message.weight = fbsMessage->weight();
-    message.name = fbsMessage->name()->str();
+    // message.age = fbsMessage->age();
+    // message.weight = fbsMessage->weight();
+    // message.name = fbsMessage->name()->str();
 
-    auto fbsGrades = fbsMessage->grades();
-    if (fbsGrades != nullptr) {
-        for (const auto* fbsGrade : *fbsGrades) {
-            Grade grade;
-            // std::cout << "Subject: " << fbsGrade->subject()->str() << ", Value: " << fbsGrade->value() << std::endl;
-            grade.value = fbsGrade->value();
-            grade.subject = fbsGrade->subject()->str();
-        }
-    }
+    // auto fbsGrades = fbsMessage->grades();
+    // if (fbsGrades != nullptr) {
+    //     for (const auto* fbsGrade : *fbsGrades) {
+    //         Grade grade;
+    //         // std::cout << "Subject: " << fbsGrade->subject()->str() << ", Value: " << fbsGrade->value() << std::endl;
+    //         grade.value = fbsGrade->value();
+    //         grade.subject = fbsGrade->subject()->str();
+    //     }
+    // }
     return message;
 }
 

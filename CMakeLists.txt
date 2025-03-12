@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 PROJECT(FBS_PB_JSON)
 set(CMAKE_CXX_STANDARD 11)
-SET(SRC_LIST serializationTest.cpp)
+SET(SRC_LIST serialization_compare.cpp)
 include_directories ("${CMAKE_CURRENT_SOURCE_DIR}/fbsgenerate/flatbuffers-2.0.0/include")
 include_directories ("${CMAKE_CURRENT_SOURCE_DIR}/pbgenerate/protobuf/include")
 
@@ -31,7 +31,6 @@ else()
     message(FATAL_ERROR "Could not find Protobuf")
 endif()
 
-ADD_EXECUTABLE(xzh ${SRC_LIST} ${CMAKE_CURRENT_SOURCE_DIR}/pbgenerate/protoSchema.pb.cc ) 
+ADD_EXECUTABLE(serialization_compare ${SRC_LIST} ${CMAKE_CURRENT_SOURCE_DIR}/pbgenerate/protoSchema.pb.cc ) 
 
-# ADD_EXECUTABLE(xzh ${SRC_LIST} ${Person_PROTO_SRCS} ${Person_PROTO_HDRS})
-target_link_libraries(xzh ${Protobuf_LIBRARIES})
+target_link_libraries(serialization_compare ${Protobuf_LIBRARIES})
